@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "debug": "^4.1.0",
+    "growl": "^1.10.5",
     "https-proxy-agent": "^2.2.1",
-    "nightwatch": "^0.9.21"
+    "nightwatch": "^1.0.14"
   }
 }
