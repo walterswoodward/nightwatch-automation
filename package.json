@@ -1,0 +1,11 @@
+{
+  "name": "nightwatch-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch"
+  },
+  "author": "walter.woodward",
+  "license": "ISC"
+}
