@@ -9,6 +9,7 @@
   "author": "walter.woodward",
   "license": "ISC",
   "dependencies": {
+    "debug": "^4.1.0",
     "nightwatch": "^0.9.21"
   }
 }
