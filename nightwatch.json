@@ -8,7 +8,7 @@
 
   "selenium" : {
     "start_process" : false,
-    "server_path" : "",
+    "server_path" : "selenuim.jar",
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
