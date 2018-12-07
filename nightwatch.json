@@ -18,7 +18,7 @@
 
   "test_settings" : {
     "default" : {
-      "launch_url" : "http://google.com",
+      "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
       "selenium_host"  : "localhost",
       "silent": true,
@@ -29,6 +29,12 @@
       "desiredCapabilities": {
         "browserName": "chrome", 
         "marionette": true
+      }
+    },
+    "integration" : {
+      "launch_url" : "http://google.com",
+      "globals" : {
+        "myGlobalVar" : "other value"
       }
     },
 
