@@ -1,4 +1,5 @@
 module.exports = {
+  '@disabled': true,
   before: function(browser) {
     console.log('Setting up Assert Tests...');
   },
@@ -6,14 +7,12 @@ module.exports = {
   after: function(browser) {
     console.log('Closing down Assert Tests...');
   },
-  'assert[attributeContains, attributeEquals, containsText, cssClassPresent, cssProperty, elementPresent]': function(
-    browser
-  ) {
+  'test assert queries': function(browser) {
     // In contrast to verify.visible(), assert.visible() will end all tests if it fails
     browser
       .url(browser.launch_url)
       .assert.visible('html')
-      .useCss()
+      .useCss();
     browser.assert.attributeContains(
       'img[id=hplogo]',
       'height',
@@ -32,9 +31,8 @@ module.exports = {
     // assert.visible()
     // assert.value()
     // assert.valueContains()
-    browser.assert.urlContains('google')
+    browser.assert.urlContains('google');
     browser.assert.urlEquals('https://www.google.com/')
-
-    .end();
+    browser.end();
   }
 };
