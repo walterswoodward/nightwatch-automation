@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nightwatch"
+    "test": "nightwatch --env integration"
   },
   "author": "walter.woodward",
   "license": "ISC",
