@@ -34,7 +34,7 @@
     "integration": {
       "launch_url": "https://google.com/",
       "globals": {
-        "myGlobalVar": "other value"
+        "xena": "https://www.amazon.com/"
       }
     },
 
