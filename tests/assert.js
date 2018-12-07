@@ -1,4 +1,7 @@
 module.exports = {
+   // TODO: Add @tags
+  // On why the standard that strings cannot begin with numbers exists: https://stackoverflow.com/questions/342152/why-cant-variable-names-start-with-numbers
+  "@tags": ["jelly", "sanity"],
   before: function(browser) {
     console.log("Setting up Assert Tests...");
   },
@@ -7,9 +10,7 @@ module.exports = {
     console.log("Closing down Assert Tests...");
   },
 
-  // TODO: Add @tags
-  // "@tags": ["demo", "height", "glink"],
-
+ 
   test_0: function(browser) {
     // In contrast to verify.visible(), assert.visible() will end all tests if it fails
     browser
@@ -27,7 +28,7 @@ module.exports = {
   },
 
   test_1:
-    // This test is ignored by turning it into a string
+    // !! THIS TEST IS IGNORED !! ... by turning it into a string
     "" +
     function(browser) {
       // Switch from xPath back to using CSS locator
@@ -64,5 +65,12 @@ module.exports = {
       .url(browser.launch_url)
       .assert.cssProperty("img[id=hplogo]", "padding-top", "109px")
       .end();
+  },
+  test_5: function(browser) {
+    browser
+      .url(browser.launch_url)
+      .assert.elementPresent("body")
+      .end();
   }
+  
 };
