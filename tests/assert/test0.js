@@ -2,22 +2,21 @@ module.exports = {
   // TODO: Add @tags
   // On why the standard that strings cannot begin with numbers exists: https://stackoverflow.com/questions/342152/why-cant-variable-names-start-with-numbers
   // TO TEST:  npm test --group assert --tag blueberry
-  "@tags": ["test0"],
-  before: function(browser) {
-    console.log("Setting up Assert Tests...");
-  },
+  "@tags": ["login", "sanity"],
+  // before: function(browser) {
+  //   console.log("Setting up Assert Tests...");
+  // },
 
-  after: function(browser) {
-    console.log("Closing down Assert Tests...");
-  },
-
-  test_0: function(browser) {
+  // after: function(browser) {
+  //   console.log("Closing down Assert Tests...");
+  // },
+  "test_0: <html> visible": function(browser) {
     // In contrast to verify.visible(), assert.visible() will end all tests if it fails
     browser
       .url(browser.launch_url)
       .assert.visible("html")
       .end();
-  },
+  }
 
   // Use this only if you want the tests to continue EVEN if the page is not visible:
   // browser
@@ -27,4 +26,3 @@ module.exports = {
   //   .verify.visible("//img")
   //   .end();
 };
-

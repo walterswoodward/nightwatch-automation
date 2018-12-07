@@ -1,6 +1,6 @@
 module.exports = {
   "@tags": ["test6"],
-  test_6: function(browser) {
+  "test6: element <body> is present": function(browser) {
     browser
       .url(browser.launch_url)
       .assert.elementPresent("body")

@@ -7,7 +7,7 @@ module.exports = {
   // after: function(browser) {
   //   console.log("Closing down Assert Tests...");
   // },
-  test_1:
+  "test_1: This test will be skipped":
   // !! THIS TEST IS IGNORED !! ... by turning it into a string
   "" +
   function(browser) {
