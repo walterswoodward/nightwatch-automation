@@ -12,10 +12,10 @@ module.exports = {
   // This test is ignored by turning it into a string
     "" +
     function(browser) {
-      browser.url('http://google.com').assert.visible("html");
+      browser.url(browser.launch_url).assert.visible("html");
 
       browser
-        .url('http://google.com')
+        .url(browser.launch_url)
         // Switch to xPath Locator Syntax
         .useXpath()
         .verify.visible("//img")
@@ -24,7 +24,7 @@ module.exports = {
 
   "Test Google Logo Height": function(browser) {
     // Switch from xPath back to using CSS locator
-    browser.url('http://google.com').useCss();
+    browser.url(browser.launch_url).useCss();
     // Checks if the given attribute (href) of an element (a) contains the expected value (google.com).
     browser.assert.attributeContains("img", "height", "92");
     // Checks if the given attribute (class) of an element (textarea) has the expected value (csi).
@@ -33,7 +33,7 @@ module.exports = {
 
   GLink: function(browser) {
     browser
-      .url('http://google.com')
+      .url(browser.launch_url)
       .assert.containsText("a[class=gb_P]", "Gmail")
       .end();
   }
