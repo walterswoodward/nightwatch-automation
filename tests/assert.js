@@ -33,7 +33,12 @@ module.exports = {
       // Switch from xPath back to using CSS locator
       browser.url(browser.launch_url).useCss();
       // Checks if the given attribute (href) of an element (a) contains the expected value (google.com).
-      browser.assert.attributeContains("img", "height", "92");
+      browser.assert.attributeContains(
+        "img",
+        "height",
+        "92",
+        "Error: Logo Height is incorrect, please fix!"
+      );
     },
   "Test textarea class w/ assert.attributeEquals": function(browser) {
     browser.url(browser.launch_url);
@@ -45,6 +50,14 @@ module.exports = {
     browser
       .url(browser.launch_url)
       .assert.containsText("a[class=gb_P]", "Gmail")
+      .end();
+  },
+  "Test Google Apps Container class w/ assert.cssClassPresent": function(
+    browser
+  ) {
+    browser
+      .url(browser.launch_url)
+      .assert.cssClassPresent("div[id=gbwa]>div", "gb_0c")
       .end();
   }
 };
