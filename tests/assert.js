@@ -10,7 +10,7 @@ module.exports = {
   // TODO: Add @tags
   // "@tags": ["demo", "height", "glink"],
 
-  "0": function(browser) {
+  test_0: function(browser) {
     // In contrast to verify.visible(), assert.visible() will end all tests if it fails
     browser
       .url(browser.launch_url)
@@ -26,7 +26,7 @@ module.exports = {
     //   .end();
   },
 
-  "1":
+  test_1:
     // This test is ignored by turning it into a string
     "" +
     function(browser) {
@@ -34,30 +34,35 @@ module.exports = {
       browser.url(browser.launch_url).useCss();
       // Checks if the given attribute (href) of an element (a) contains the expected value (google.com).
       browser.assert.attributeContains(
-        "img",
+        "img[id=hplogo]",
         "height",
         "92",
         "Error: Logo Height is incorrect, please fix!"
       );
     },
-  "2": function(browser) {
+  test_2: function(browser) {
     browser.url(browser.launch_url);
     // Checks if the given attribute (class) of an element (textarea) has the expected value (csi).
     browser.assert.attributeEquals("textarea", "class", "csi").end();
   },
 
-  "3": function(browser) {
+  test_3: function(browser) {
     browser
       .url(browser.launch_url)
       .assert.containsText("a[class=gb_P]", "Gmail")
       .end();
   },
-  "4": function(
-    browser
-  ) {
+  // see also negation of this: assert.cssClassNotPresent()
+  test_4: function(browser) {
     browser
       .url(browser.launch_url)
       .assert.cssClassPresent("div[id=gbwa]>div", "gb_0c")
+      .end();
+  },
+  test_5: function(browser) {
+    browser
+      .url(browser.launch_url)
+      .assert.cssProperty("img[id=hplogo]", "padding-top", "109px")
       .end();
   }
 };
