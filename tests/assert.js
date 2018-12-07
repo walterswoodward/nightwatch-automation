@@ -13,7 +13,7 @@ module.exports = {
     browser
       .url(browser.launch_url)
       .assert.visible('html')
-      .useCss();
+      .useCss()
     browser.assert.attributeContains(
       'img[id=hplogo]',
       'height',
@@ -26,16 +26,15 @@ module.exports = {
     browser.assert.cssProperty('img[id=hplogo]', 'padding-top', '109px');
     browser.assert.elementPresent('body');
     browser.assert.cssProperty('div[id=cst]', 'visibility', 'visible');
+    // SHORTCUT ASSERTS FOR SPECIFIC PROPS:
     // assert.hidden()
     // assert.title()
-    browser.assert.urlContains('google').end();
-  }
+    // assert.visible()
+    // assert.value()
+    // assert.valueContains()
+    browser.assert.urlContains('google')
+    browser.assert.urlEquals('https://www.google.com/')
 
-  // Use this only if you want the tests to continue EVEN if the page is not visible:
-  // browser
-  //   .url(browser.launch_url)
-  //   // Switch to xPath Locator Syntax
-  //   .useXpath()
-  //   .verify.visible("//img")
-  //   .end();
+    .end();
+  }
 };

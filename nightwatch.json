@@ -32,7 +32,7 @@
       }
     },
     "integration": {
-      "launch_url": "http://google.com",
+      "launch_url": "https://google.com/",
       "globals": {
         "myGlobalVar": "other value"
       }
