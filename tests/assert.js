@@ -10,7 +10,7 @@ module.exports = {
   // TODO: Add @tags
   // "@tags": ["demo", "height", "glink"],
 
-  "Test Visibility w/ assert.visible": function(browser) {
+  "0": function(browser) {
     // In contrast to verify.visible(), assert.visible() will end all tests if it fails
     browser
       .url(browser.launch_url)
@@ -26,7 +26,7 @@ module.exports = {
     //   .end();
   },
 
-  "Test Logo Height w/ assert.attributeContains":
+  "1":
     // This test is ignored by turning it into a string
     "" +
     function(browser) {
@@ -40,19 +40,19 @@ module.exports = {
         "Error: Logo Height is incorrect, please fix!"
       );
     },
-  "Test textarea class w/ assert.attributeEquals": function(browser) {
+  "2": function(browser) {
     browser.url(browser.launch_url);
     // Checks if the given attribute (class) of an element (textarea) has the expected value (csi).
     browser.assert.attributeEquals("textarea", "class", "csi").end();
   },
 
-  "Test GLink text w/ assert.containsText": function(browser) {
+  "3": function(browser) {
     browser
       .url(browser.launch_url)
       .assert.containsText("a[class=gb_P]", "Gmail")
       .end();
   },
-  "Test Google Apps Container class w/ assert.cssClassPresent": function(
+  "4": function(
     browser
   ) {
     browser
