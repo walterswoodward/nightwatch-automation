@@ -7,9 +7,9 @@ module.exports = {
     console.log("Closing down Assert Tests...");
   },
   "@tags": ["demo", "height", "glink"],
-               
+
   "Demo Test Google":
-  // This test is ignored by turning it into a string
+    // This test is ignored by turning it into a string
     "" +
     function(browser) {
       browser.url(browser.launch_url).assert.visible("html");
