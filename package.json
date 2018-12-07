@@ -2,6 +2,7 @@
   "name": "nightwatch-automation",
   "version": "1.0.0",
   "description": "",
+  "repository": "https://github.com/walterswoodward/nightwatch-automation.git",
   "main": "index.js",
   "scripts": {
     "test": "nightwatch --env integration"
