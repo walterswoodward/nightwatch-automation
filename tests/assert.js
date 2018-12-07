@@ -22,16 +22,19 @@ module.exports = {
         .end();
     },
 
-  "Test Google Logo Height": function(browser) {
+  "Test Logo Height w/ assert.attributeContains": function(browser) {
     // Switch from xPath back to using CSS locator
     browser.url(browser.launch_url).useCss();
     // Checks if the given attribute (href) of an element (a) contains the expected value (google.com).
     browser.assert.attributeContains("img", "height", "92");
+  },
+  "Test textarea class w/ assert.attributeEquals": function(browser) {
+    browser.url(browser.launch_url);
     // Checks if the given attribute (class) of an element (textarea) has the expected value (csi).
     browser.assert.attributeEquals("textarea", "class", "csi").end();
   },
 
-  GLink: function(browser) {
+  "Test GLink text w/ assert.containsText": function(browser) {
     browser
       .url(browser.launch_url)
       .assert.containsText("a[class=gb_P]", "Gmail")
