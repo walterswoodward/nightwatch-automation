@@ -32,7 +32,7 @@ module.exports = {
     // assert.value()
     // assert.valueContains()
     browser.assert.urlContains('google');
-    browser.assert.urlEquals('https://www.google.com/')
+    browser.assert.urlEquals('https://www.google.com/');
     browser.end();
   }
 };
